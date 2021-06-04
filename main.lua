@@ -10,3 +10,15 @@ while wait() do
 		script.Parent.Parent.Character:BreakJoints()
 	end
 end
+
+--Anti-Switch script
+
+local prisoner = game.Teams.Prisoners
+
+function Click(mouse) 
+	if script.Parent.Parent.Parent.Parent.Parent.TeamColor ~= prisoner.TeamColor then
+		script.Parent.Parent.Parent.Parent.Parent.TeamColor = BrickColor.new("Really blue") 
+	end 
+end  
+
+script.Parent.MouseButton1Click:connect(Click) 
